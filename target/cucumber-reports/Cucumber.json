@@ -1,0 +1,130 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-05-03T10:34:45.656Z",
+        "line": 3,
+        "name": "Verify successful get all locations",
+        "description": "",
+        "id": "get-all-locations;verify-successful-get-all-locations",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 61654300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I access the endpoint \"https://qamobileapp.sanral.co.za/TransitAPI/api/v1/FairPay/locations\" \"getalllocations\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://qamobileapp.sanral.co.za/TransitAPI/api/v1/FairPay/locations\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"getalllocations\"",
+                  "offset": 93
+                }
+              ],
+              "location": "stepsdef.MyStepsdefs.iAccessTheEndpoint(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7960100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "headers are \"accept, application/json:Content-Type, application/json:Authorization,Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJGYWlyUGF5IiwiYXVkIjoiVHJhbnNpdEFQSSIsIm5iZiI6MTcxNDcyMTY0OCwiZXhwIjoxNzE0ODIyNjQ4LCJpYXQiOjE3MTQ3MjI2NDh9.zXj29UD6vUe8AKTdZVX3BxRE0w7u6KHUJQZHZGoAoPE\" \"sendotp\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"accept, application/json:Content-Type, application/json:Authorization,Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJGYWlyUGF5IiwiYXVkIjoiVHJhbnNpdEFQSSIsIm5iZiI6MTcxNDcyMTY0OCwiZXhwIjoxNzE0ODIyNjQ4LCJpYXQiOjE3MTQ3MjI2NDh9.zXj29UD6vUe8AKTdZVX3BxRE0w7u6KHUJQZHZGoAoPE\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"sendotp\"",
+                  "offset": 289
+                }
+              ],
+              "location": "stepsdef.MyStepsdefs.headersAre(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7008700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I send the request \":\" \"getalllocations\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\":\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"getalllocations\"",
+                  "offset": 23
+                }
+              ],
+              "location": "stepsdef.MyStepsdefs.iSendTheRequest(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"String.split(String)\" because the return value of \"processes.Hooks.readproperties(String)\" is null\r\n\tat processes.Process.getHeaders(Process.java:129)\r\n\tat processes.Process.sendotp(Process.java:29)\r\n\tat stepsdef.MyStepsdefs.iShouldBeAbleToGetStatusCodeOf(MyStepsdefs.java:34)\r\n\tat ✽.I should be able to get status code of 200 \"getalllocations\"(file:///C:/Users/Jacqueline.Kamadi/Downloads/APIs/src/test/resources/SANRAL/getalllocations.feature:7)\r\n",
+              "duration": 9602500,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "I should be able to get status code of 200 \"getalllocations\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 39
+                },
+                {
+                  "val": "\"getalllocations\"",
+                  "offset": 43
+                }
+              ],
+              "location": "stepsdef.MyStepsdefs.iShouldBeAbleToGetStatusCodeOf(int,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2280300,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "my body should have the right response body",
+            "match": {
+              "location": "stepsdef.MyStepsdefs.myBodyShouldHaveTheRightResponseBody()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanral"
+          }
+        ]
+      }
+    ],
+    "name": "Get All Locations",
+    "description": "",
+    "id": "get-all-locations",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/SANRAL/getalllocations.feature",
+    "tags": []
+  }
+]

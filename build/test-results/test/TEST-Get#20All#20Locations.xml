@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Get All Locations" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-05-03T10:34:44" hostname="JKAMADI-LPT-IMS" time="1.082">
+  <properties/>
+  <testcase name="Verify successful get all locations" classname="Get All Locations" time="1.082">
+    <failure message="java.lang.NullPointerException: Cannot invoke &quot;String.split(String)&quot; because the return value of &quot;processes.Hooks.readproperties(String)&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;String.split(String)&quot; because the return value of &quot;processes.Hooks.readproperties(String)&quot; is null
+	at processes.Process.getHeaders(Process.java:129)
+	at processes.Process.sendotp(Process.java:29)
+	at stepsdef.MyStepsdefs.iShouldBeAbleToGetStatusCodeOf(MyStepsdefs.java:34)
+	at ✽.I should be able to get status code of 200 &quot;getalllocations&quot;(file:///C:/Users/Jacqueline.Kamadi/Downloads/APIs/src/test/resources/SANRAL/getalllocations.feature:7)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@sanral
+Scenario: Verify successful get all locations                                                                                                                                                                                                                                                                    # src/test/resources/SANRAL/getalllocations.feature:3
+  Given I access the endpoint "https://qamobileapp.sanral.co.za/TransitAPI/api/v1/FairPay/locations" "getalllocations"                                                                                                                                                                                           # stepsdef.MyStepsdefs.iAccessTheEndpoint(java.lang.String,java.lang.String)
+  And headers are "accept, application/json:Content-Type, application/json:Authorization,Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJGYWlyUGF5IiwiYXVkIjoiVHJhbnNpdEFQSSIsIm5iZiI6MTcxNDcyMTY0OCwiZXhwIjoxNzE0ODIyNjQ4LCJpYXQiOjE3MTQ3MjI2NDh9.zXj29UD6vUe8AKTdZVX3BxRE0w7u6KHUJQZHZGoAoPE" "sendotp" # stepsdef.MyStepsdefs.headersAre(java.lang.String,java.lang.String)
+  When I send the request ":" "getalllocations"                                                                                                                                                                                                                                                                  # stepsdef.MyStepsdefs.iSendTheRequest(java.lang.String,java.lang.String)
+  Then I should be able to get status code of 200 "getalllocations"                                                                                                                                                                                                                                              # stepsdef.MyStepsdefs.iShouldBeAbleToGetStatusCodeOf(int,java.lang.String)
+      java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "processes.Hooks.readproperties(String)" is null
+	at processes.Process.getHeaders(Process.java:129)
+	at processes.Process.sendotp(Process.java:29)
+	at stepsdef.MyStepsdefs.iShouldBeAbleToGetStatusCodeOf(MyStepsdefs.java:34)
+	at âœ½.I should be able to get status code of 200 "getalllocations"(file:///C:/Users/Jacqueline.Kamadi/Downloads/APIs/src/test/resources/SANRAL/getalllocations.feature:7)
+
+  And my body should have the right response body                                                                                                                                                                                                                                                                # stepsdef.MyStepsdefs.myBodyShouldHaveTheRightResponseBody()
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Get All Locations</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Get All Locations</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Get All Locations</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.082s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Verify successful get all locations"></a>
+<h3 class="failures">Verify successful get all locations</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;String.split(String)&quot; because the return value of &quot;processes.Hooks.readproperties(String)&quot; is null
+	at processes.Process.getHeaders(Process.java:129)
+	at processes.Process.sendotp(Process.java:29)
+	at stepsdef.MyStepsdefs.iShouldBeAbleToGetStatusCodeOf(MyStepsdefs.java:34)
+	at ✽.I should be able to get status code of 200 &quot;getalllocations&quot;(file:///C:/Users/Jacqueline.Kamadi/Downloads/APIs/src/test/resources/SANRAL/getalllocations.feature:7)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">Verify successful get all locations</td>
+<td class="failures">1.082s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@sanral
+Scenario: Verify successful get all locations                                                                                                                                                                                                                                                                    # src/test/resources/SANRAL/getalllocations.feature:3
+  Given I access the endpoint &quot;https://qamobileapp.sanral.co.za/TransitAPI/api/v1/FairPay/locations&quot; &quot;getalllocations&quot;                                                                                                                                                                                           # stepsdef.MyStepsdefs.iAccessTheEndpoint(java.lang.String,java.lang.String)
+  And headers are &quot;accept, application/json:Content-Type, application/json:Authorization,Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJGYWlyUGF5IiwiYXVkIjoiVHJhbnNpdEFQSSIsIm5iZiI6MTcxNDcyMTY0OCwiZXhwIjoxNzE0ODIyNjQ4LCJpYXQiOjE3MTQ3MjI2NDh9.zXj29UD6vUe8AKTdZVX3BxRE0w7u6KHUJQZHZGoAoPE&quot; &quot;sendotp&quot; # stepsdef.MyStepsdefs.headersAre(java.lang.String,java.lang.String)
+  When I send the request &quot;:&quot; &quot;getalllocations&quot;                                                                                                                                                                                                                                                                  # stepsdef.MyStepsdefs.iSendTheRequest(java.lang.String,java.lang.String)
+  Then I should be able to get status code of 200 &quot;getalllocations&quot;                                                                                                                                                                                                                                              # stepsdef.MyStepsdefs.iShouldBeAbleToGetStatusCodeOf(int,java.lang.String)
+      java.lang.NullPointerException: Cannot invoke &quot;String.split(String)&quot; because the return value of &quot;processes.Hooks.readproperties(String)&quot; is null
+	at processes.Process.getHeaders(Process.java:129)
+	at processes.Process.sendotp(Process.java:29)
+	at stepsdef.MyStepsdefs.iShouldBeAbleToGetStatusCodeOf(MyStepsdefs.java:34)
+	at âœ½.I should be able to get status code of 200 &quot;getalllocations&quot;(file:///C:/Users/Jacqueline.Kamadi/Downloads/APIs/src/test/resources/SANRAL/getalllocations.feature:7)
+
+  And my body should have the right response body                                                                                                                                                                                                                                                                # stepsdef.MyStepsdefs.myBodyShouldHaveTheRightResponseBody()
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at May 3, 2024, 1:34:46 PM</p>
+</div>
+</div>
+</body>
+</html>
